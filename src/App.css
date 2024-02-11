@@ -36,3 +36,41 @@
     transform: rotate(360deg);
   }
 }
+
+.btn {
+  margin: 10px;
+}
+.Home {
+  text-decoration: none;
+
+  margin: 10px;
+}
+
+.Home .text-dark {
+  color: white;
+}
+.Home .text-light {
+  color: black;
+}
+.About {
+  text-decoration: none;
+
+  margin: 10px;
+}
+.About .text-light {
+  color: black;
+}
+.About .text-dark {
+  color: white;
+}
+
+.navbar{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: Black;
+}
+
+.form-check {
+  margin-left: auto;
+}
