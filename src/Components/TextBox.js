@@ -53,19 +53,6 @@ export default function TextBox(props) {
     }
   };
 
-  const checkText=()=>{
-    console.log("function called");
-    var text= document.getElementById("abc").value;
-    for(let i=0;i<text.length;i++){
-      if(text[i]===" "){
-        continue;
-      }else{
-        
-        return false;
-      }
-    }
-    return true;
-  }
 
   return (
     <>
@@ -114,9 +101,9 @@ export default function TextBox(props) {
           style={{ color: props.mode === "light" ? "black" : "white" }}
         >
           <p>
-            {(text.length===0 || checkText())?0:(text.charAt(text.length-1)===" "?text.split(" ").length-1:text.split(" ").length)} words and {text.length} characters
+            {text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters
           </p>
-          <p>{text.split(" ").length * (1 / 125)} minutes read</p>
+          <p>{text.split(" ").filter((element)=>{return element.length!==0}).length * (1 / 125)} minutes read</p>
           <p style={{ color: props.mode === "light" ? "black" : "white" }}>
             {text === "" ? "Enter something in the textBox" : text}
           </p>
